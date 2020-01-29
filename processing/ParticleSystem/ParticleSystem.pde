@@ -10,6 +10,8 @@ float accelerationZ = 0;
 
 void setup() {
   size(500,500,P3D);
+  velocityX = random(-20,20);
+  velocityZ = random(-20,20);
 }
 
 void drawFloor() {
@@ -27,12 +29,14 @@ void drawSetting() {
 }
 
 void computePosition(float dt) {
-  positionX = 1;
+  positionX = positionX + velocityX * dt;
+  velocityX = velocityX + accelerationX * dt;
   
   positionY = positionY + velocityY * dt;
   velocityY = velocityY + accelerationY * dt;
   
-  positionZ = 1;
+  positionZ = positionZ + velocityZ * dt;
+  velocityZ = velocityZ + accelerationZ * dt;
 }
 
 void draw() {
