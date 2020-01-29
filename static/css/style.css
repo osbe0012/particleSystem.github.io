@@ -8,3 +8,8 @@ body {
 	background: lightgrey;
 	padding: 20pt;
 }
+
+#startImage {
+	height: 200pt;
+	width: auto;
+}
